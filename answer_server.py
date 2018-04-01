@@ -8,7 +8,8 @@
 # @author Jay Smith <jayvsmith@gmail.com>
 
 import threading, configparser
-from BaseHTTPServer import BaseHTTPRequestHandler, HTTPServer
+from http.server import BaseHTTPRequestHandler, HTTPServer
+
 
 class _AnswerRequestHandler(BaseHTTPRequestHandler):
     def do_HEAD(self):
@@ -39,7 +40,7 @@ class _DisabledAnswerServer(object):
         return
 
 def build_answer_server():
-    config = ConfigParser.ConfigParser()
+    config = configparser.ConfigParser()
     config.read("config.ini")
     enabled = config.getboolean("answer server", "enabled")
     port = config.getint("answer server", "tcp_port")
