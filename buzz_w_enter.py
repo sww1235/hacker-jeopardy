@@ -13,12 +13,14 @@ from sys import argv
 
 from buzz import buzz
 
+
 def main():
     buzz_number = int(argv[1])
 
     while True:
         raw_input("> ")
         buzz(buzz_number)
+
 
 if __name__ == "__main__":
     main()
