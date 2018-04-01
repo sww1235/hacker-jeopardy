@@ -37,4 +37,4 @@ def wait_4_buzz(players_allowed_to_answer, mis_buzz_player_penalty):
 
 if __name__ == "__main__":
     while True:
-        print wait_4_buzz([-1, 0, 1, 2]), "buzzed"
+        print(wait_4_buzz([-1, 0, 1, 2]), "buzzed")

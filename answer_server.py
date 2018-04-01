@@ -7,7 +7,7 @@
 # http://www.gnu.org/prep/maintain/html_node/License-Notices-for-Other-Files.html
 # @author Jay Smith <jayvsmith@gmail.com>
 
-import threading, ConfigParser
+import threading, configparser
 from BaseHTTPServer import BaseHTTPRequestHandler, HTTPServer
 
 class _AnswerRequestHandler(BaseHTTPRequestHandler):

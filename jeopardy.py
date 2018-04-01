@@ -10,7 +10,7 @@
 # @author Jeremy Hiebert <jkhiebert@gmail.com>
 # @author Mark Jenkins <mark@markjenkins.ca>
 
-import curses, json, time, ConfigParser
+import curses, json, time, configparser
 from curses import wrapper
 from pickle import dump, load
 from os.path import exists
@@ -35,7 +35,7 @@ from question_states import *
 from answer_server import build_answer_server
 
 audio = build_audio_engine()
-config = ConfigParser.ConfigParser()
+config = configparser.ConfigParser()
 config.read("config.ini")
 
 PLAYER_SCORE_SEPARATION = ":"

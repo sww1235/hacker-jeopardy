@@ -7,7 +7,7 @@
 # http://www.gnu.org/prep/maintain/html_node/License-Notices-for-Other-Files.html
 # @author Jay Smith <jayvsmith@gmail.com>
 
-import ConfigParser
+import configparser
 from os import system, getenv
 from os.path import exists, join
 
@@ -16,7 +16,7 @@ try:
 except ImportError:
     pass
 
-config = ConfigParser.ConfigParser()
+config = configparser.ConfigParser()
 config.read("config.ini")
 
 class _NoAudio(object):
@@ -95,4 +95,3 @@ def build_audio_engine():
         return _BeepAudio(beep_command)
     else:
         return _NoAudio()
-

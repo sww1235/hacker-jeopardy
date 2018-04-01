@@ -10,9 +10,9 @@
 # @author Mark Jenkins <mark@markjenkins.ca>
 # @author Jay Smith <jayvsmith@gmail.com>
 
-import socket, ConfigParser
+import socket, configparser
 
-config = ConfigParser.ConfigParser()
+config = configparser.ConfigParser()
 config.read("config.ini")
 
 HOST = config.get("buzzer", "server_ip")
